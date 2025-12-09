@@ -1,0 +1,98 @@
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Data Files (datasets should NOT be uploaded)
+data/raw/*
+data/processed/*
+data/external/*
+!data/**/dataset_dict.json
+
+# Model folders allowed but NOT large weights
+models/*
+!models/**/
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.pt
+models/**/*.pth
+models/**/*.h5
+models/**/*.msgpack
+models/**/tf_model.h5
+models/**/pytorch_model.bin
+
+# Keep empty model folders
+!models/**/.gitkeep
+
+# Logs / Cache
+.cache/
+*.log
+
+# Build / Distribution
+build/
+dist/
+downloads/
+.eggs/
+*.egg-info/
+*.egg
+wheels/
+share/python-wheels/
+MANIFEST
+
+# Dependency Logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test / Coverage
+.tox/
+.nox/
+coverage.xml
+*.cover
+.pytest_cache/
+.htmlcov/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+
+# Static type checking
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Docs build
+docs/_build/
+site/
+
+# Ruff / Abstra / Others
+.ruff_cache/
+.abstra/
+.pdm-python
+.pypirc
+.cursorignore
+.cursorindexingignore
+
+# Cython Debug
+cython_debug/
+
+# Reports SHOULD be uploaded
+!reports/
+!reports/**
