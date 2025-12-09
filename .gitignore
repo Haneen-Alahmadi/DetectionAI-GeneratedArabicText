@@ -17,29 +17,20 @@ ENV/
 .ipynb_checkpoints/
 
 
-# Ignore heavy model weights
-models/**/*.safetensors
-models/**/*.bin
-models/**/*.pt
-models/**/*.h5
-models/**/tf_model.h5
-models/**/pytorch_model.bin
-
-# Allow lightweight models
+# Allow full AraElectra model folder
+!models/araelectra-base-discriminator/**
+!models/araelectra-base-discriminator/
+!models/bert-base-arabertv02/**
+!models/bert-base-arabertv02/
+!models/bert-base-arabic-camelbert-mix/**
+!models/bert-base-arabic-camelbert-mix/
+# Allow ONLY lightweight ML models (override ignore)
 !models/**/*.pkl
 !models/**/*.joblib
 
-# Allow tokenizer files
-!models/**/tokenizer.json
-!models/**/tokenizer_config.json
-!models/**/vocab.txt
-
-# Ignore entire model directories by default
-models/*
-
-
-# Keep empty model folders
+# Allow model folders to exist (empty folders allowed)
 !models/**/.gitkeep
+
 
 # Logs / Cache
 .cache/
