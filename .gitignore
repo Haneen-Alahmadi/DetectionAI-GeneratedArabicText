@@ -16,11 +16,6 @@ ENV/
 # Jupyter Notebook
 .ipynb_checkpoints/
 
-# Data Files (datasets should NOT be uploaded)
-data/raw/*
-data/processed/*
-data/external/*
-!data/**/dataset_dict.json
 
 # Model folders allowed but NOT large weights
 models/*
