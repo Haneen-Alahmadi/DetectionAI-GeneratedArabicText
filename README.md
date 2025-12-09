@@ -25,6 +25,7 @@ AI-Arabic-Text-Detection/
 │   └── phase2Preprocessing.ipynb
 │
 ├── models/
+│   ├── araelectra-base-discriminator
 │   ├── bert-base-arabertv02/
 │   ├── bert-base-arabic-camelbert-mix/
 │   ├── logisticModel.pkl
@@ -37,6 +38,7 @@ AI-Arabic-Text-Detection/
 │   ├── figures/
 │   │   ├── commonTermsForAI.png
 │   │   ├── commonTermsForHuman.png
+│   │   ├── confusion_AraELECTRA.png
 │   │   ├── confusion_AraBERT.png
 │   │   ├── confusion_CAMeL-Mix.png
 │   │   ├── confusion_Logistic Regression.png
@@ -46,6 +48,7 @@ AI-Arabic-Text-Detection/
 │   │   ├── FeaturePairpair.png
 │   │   ├── models_comparison_bar.png
 │   │   ├── NumberOfText.png
+│   │   ├── roc_AraELECTRA.png
 │   │   ├── roc_AraBERT.png
 │   │   ├── roc_CAMeL-Mix.png
 │   │   ├── roc_Logistic Regression.png

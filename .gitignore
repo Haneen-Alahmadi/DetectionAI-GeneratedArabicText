@@ -17,17 +17,26 @@ ENV/
 .ipynb_checkpoints/
 
 
-# Model folders allowed but NOT large weights
-models/*
-!models/**/
+# Ignore heavy model weights
 models/**/*.safetensors
 models/**/*.bin
 models/**/*.pt
-models/**/*.pth
 models/**/*.h5
-models/**/*.msgpack
 models/**/tf_model.h5
 models/**/pytorch_model.bin
+
+# Allow lightweight models
+!models/**/*.pkl
+!models/**/*.joblib
+
+# Allow tokenizer files
+!models/**/tokenizer.json
+!models/**/tokenizer_config.json
+!models/**/vocab.txt
+
+# Ignore entire model directories by default
+models/*
+
 
 # Keep empty model folders
 !models/**/.gitkeep
