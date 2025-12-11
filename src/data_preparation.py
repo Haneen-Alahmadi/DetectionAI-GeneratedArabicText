@@ -156,11 +156,11 @@ def process_and_save_features(
         raise FileNotFoundError(f"File not found at: {os.path.abspath(input_path)}")
 
     df = pd.read_csv(input_path)
-    df["specialCharRatio"] = df["clean_text_stemmed"].apply(specialCharRatio)
-    df["countSemicolons"] = df["clean_text_stemmed"].apply(countSemicolons)
-    df["countPrepositions"] = df["clean_text_stemmed"].apply(countPrepositions)
-    df["countSecondPerson"] = df["clean_text_stemmed"].apply(countSecondPerson)
-    df["emotionalValenceScore"] = df["clean_text_stemmed"].apply(emotionalValenceScore)
+    df["specialCharRatio"] = df["clean_text"].apply(specialCharRatio)
+    df["countSemicolons"] = df["clean_text"].apply(countSemicolons)
+    df["countPrepositions"] = df["clean_text"].apply(countPrepositions)
+    df["countSecondPerson"] = df["clean_text"].apply(countSecondPerson)
+    df["emotionalValenceScore"] = df["clean_text"].apply(emotionalValenceScore)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     df.to_csv(output_path, index=False, encoding="utf-8-sig")
     return df
